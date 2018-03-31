@@ -10,7 +10,7 @@
 /build
 
 # CSS Folder for SCSS Automation Builds
-/src/css
+/src/watch-css
 
 # misc
 .DS_Store
