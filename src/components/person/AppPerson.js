@@ -1,8 +1,9 @@
 import React from 'react';
+import scopedClasses from './__scopedClasses.css';
 
 const AppPerson = (props) => {
   return (
-    <div className="app-Person callout">
+    <div className={ `app-Person callout ${scopedClasses.Person}` }>
       <button className="close-button" aria-label="Dismiss alert" type="button">
         <span aria-hidden="true"
           onClick={ props.destroy }>&times;</span>
