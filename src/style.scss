@@ -1,6 +1,17 @@
+/**
+ * Sass/CSS Architecture by Harry!
+ */
+
+// Abstract
+
 // Base
-@import 'activate/base';
+@import 'activate/base/base';
 
 // Components
 @import 'components/app';
 @import 'components/person/app-Person';
+
+// Objects
+
+// Pages
+

@@ -61,6 +61,8 @@ class App extends Component {
 
   render() {
     let personsDOM = null;
+    let toggleButtonColorStateClasses = ['hollow'];
+
     if (this.state.showPersons) {
       personsDOM = (
         <div className="app-PersonsList">
@@ -80,13 +82,51 @@ class App extends Component {
           }
         </div>
       );
+      toggleButtonColorStateClasses = [];
+    }
+
+    if (this.state.persons.length >= 3) {
+      toggleButtonColorStateClasses.push('primary');
+    } else if (this.state.persons.length === 2) {
+      toggleButtonColorStateClasses.push('warning');
+    } else if (this.state.persons.length <= 1) {
+      toggleButtonColorStateClasses.push('alert');
+    }
+
+    if (this.state.showPersons) {
+      personsDOM = (
+        <div className="app-PersonsList">
+          {
+            this.state.persons.map((person, index) => {
+              return (
+                <AppPerson 
+                  name={ person.name }
+                  destroy={ () => this.deletePersonHandler(index) }
+                  age={ person.age }
+                  key={ person.id }
+                  changed={ (event) => this.nameChangedHandler(event, person.id) }>
+                  { person.finishingMove }
+                </AppPerson>
+              );
+            })
+          }
+        </div>
+      );
+      toggleButtonColorStateClasses = [];
+      if (this.state.persons.length >= 3) {
+        toggleButtonColorStateClasses.push('primary');
+      } else if (this.state.persons.length === 2) {
+        toggleButtonColorStateClasses.push('warning');
+      } else if (this.state.persons.length <= 1) {
+        toggleButtonColorStateClasses.push('alert');
+      }
     }
 
     return (
       <div className="app">
         <h1>This is S.H.I.E.L.D!!!</h1>
         <p>Yes Yes! Sierra Hotel <strong>India</strong> Echo Lima Delta</p>
-        <button className="button radius bordered shadow primary"
+        <button className={ `button radius bordered ${toggleButtonColorStateClasses.join(' ')}` }
           onClick={ this.togglePersonHandler }>
           Toggle Wrestlers
         </button>
