@@ -9,9 +9,6 @@
 # production
 /build
 
-# CSS Folder for SCSS Automation Builds
-/src/watch-css
-
 # misc
 .DS_Store
 .env.local

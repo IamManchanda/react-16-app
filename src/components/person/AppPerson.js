@@ -1,5 +1,5 @@
 import React from 'react';
-import modifierClasses from './__modifierClasses.css';
+import modifierClasses from './__modifierClasses.scss';
 
 const AppPerson = (props) => {
   const randomNumber = Math.floor(Math.random() * 10) + 1;
