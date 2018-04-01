@@ -225,7 +225,7 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin({ 
-      filename: 'scoped-styles.css', 
+      filename: 'css/scoped-styles.css', 
       allChunks: true, 
       disable: process.env.NODE_ENV !== 'production' 
     }),
