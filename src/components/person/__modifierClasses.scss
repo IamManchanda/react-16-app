@@ -1,5 +1,19 @@
+.isLink {
+  margin-left: 0.25rem;
+}
+
 .isCalloutSecondary {
   background-color: #eaeaea;
+
+  .isLink {
+    color: #1779ba;
+    font-weight: bold;
+
+    &:hover,
+    &:focus {
+      color: #0ea29d;
+    }
+  }
 }
 
 .isCalloutLight {
