@@ -17,11 +17,11 @@ yarn start # or, npm start
 ### Build the server
 
 ```
-yarn build # or, npm build
+yarn build # or, npm run build
 ```
 
 ## Testing
 
 ```
-yarn test # or, npm test
+yarn test # or, npm run test
 ```
