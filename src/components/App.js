@@ -65,7 +65,7 @@ class App extends Component {
 
     if (this.state.showPersons) {
       personsDOM = (
-        <div className="app-PersonsList">
+        <div className="app-PersonList">
           {
             this.state.persons.map((person, index) => {
               return (
